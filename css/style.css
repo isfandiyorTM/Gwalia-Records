@@ -1,0 +1,465 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* --main-color: #eb5e28; */
+    /* --main-color: #e36414; */
+    --main-color: #46a358;
+    --text-black: #3d3d3d;
+    --text-lightblack: #727272;
+    --hover-color-green: #419150;
+}
+
+body {
+    /* background: url(https://i.pinimg.com/originals/4c/b6/bc/4cb6bcbb863017f2f702e5fe07becaf1.jpg) no-repeat center / cover; */
+    font-family: "Open Sans", sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    padding: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    width: 100%;
+}
+
+
+/* Nav start */
+
+header nav {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    animation: top-to-bottom 2s forwards;
+}
+
+@keyframes top-to-bottom {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+header nav .container {
+    height: 80px;
+}
+
+.navigation a {
+    position: relative;
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--text-black);
+    margin: 0 10px;
+    transition: 0.4s;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.navigation a:active {
+    transform: scale(0.98);
+}
+
+.navigation a::before {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: -5px;
+    transform: translateY(10px);
+    opacity: 0;
+    background: var(--main-color);
+    transition: 0.4s;
+}
+
+.navigation a.active:before {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.navigation a:hover::before {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.logo img {
+    width: 80px;
+}
+
+.login-div button {
+    margin: 0 10px;
+    font-size: 16px;
+    transition: 0.4s;
+}
+
+.login-div button:active {
+    transform: translateY(3px);
+}
+
+.login-div button:nth-child(4):hover {
+    background: var(--hover-color-green);
+}
+
+.shop {
+    position: relative;
+}
+
+.shop span {
+    position: absolute;
+    top: -5px;
+    left: 12px;
+    background: var(--main-color);
+    color: white;
+    font-size: 12px;
+    padding: 1px 4px;
+    border-radius: 50%;
+}
+
+.login {
+    margin-right: 0 !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    background: var(--main-color);
+    color: white;
+}
+
+#menu {
+    transform: translateY(6px);
+    font-size: 30px;
+    display: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#menu:active {
+    transform: translateY(9px);
+}
+
+
+/* Nav end */
+
+
+/* Slider start */
+
+header section .container {
+    background: #f5f5f5;
+    margin: 150px auto 50px;
+    border-radius: 6px;
+    padding: 70px 0px;
+    overflow: hidden;
+}
+
+.slide.active {
+    display: flex;
+    animation: right-to-left 0.6s;
+}
+
+@keyframes right-to-left {
+    0% {
+        transform: translateX(2000px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.sliders {
+    min-height: 350px;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.slide:nth-child(even) {
+    text-align: right;
+    flex-direction: row-reverse;
+}
+
+.slide .text-div {
+    width: 100%;
+    padding: 0 50px;
+}
+
+.slide .text-div p:first-child {
+    font-style: 14px;
+    color: var(--text-black);
+    text-transform: uppercase;
+}
+
+.slide .text-div h1 {
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 70px;
+    text-transform: uppercase;
+    margin: 10px 0;
+    color: var(--text-black);
+}
+
+.slide .text-div h1 span {
+    color: var(--main-color);
+}
+
+.slide .text-div p:last-child {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--text-lightblack);
+}
+
+.slide .text-div button {
+    margin-top: 50px;
+    font-size: 20px;
+    padding: 10px 40px;
+    color: white;
+    border-radius: 6px;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition: 0.4s;
+    background: var(--main-color);
+}
+
+.slide .text-div button:hover {
+    background: var(--hover-color-green);
+}
+
+.slide .text-div button:active {
+    transform: translateY(3px);
+}
+
+.slide .image-div {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide:nth-child(even) .image-div {
+    left: 50px;
+}
+
+.slide .image-div {
+    position: absolute;
+    top: 15px;
+    left: 680px;
+    z-index: 1;
+    animation: right-to-left 0.8s;
+}
+
+.slide .image-div img {
+    width: 600px;
+    transition: 0.4s;
+}
+
+.slide .image-div img:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.buttons button {
+    width: 11px;
+    height: 11px;
+    margin: 0 5px;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: #41915075;
+}
+
+.buttons button.active {
+    background: var(--main-color);
+}
+
+.buttons button:hover {
+    background: var(--main-color);
+}
+
+@media (max-width: 1250px) {
+    .container {
+        max-width: 992px;
+    }
+    header section .container {
+        margin: 110px auto;
+    }
+    .slide .text-div {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(3px);
+    }
+    .slide:nth-child(even) .image-div {
+        left: 450px;
+    }
+    .slide .image-div {
+        left: 450px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        max-width: 768px;
+    }
+    .slide:nth-child(even) .image-div {
+        left: 280px;
+    }
+    .slide .image-div {
+        left: 280px;
+    }
+}
+
+@media (max-width: 780px) {
+    .container {
+        max-width: 600px;
+    }
+    header nav .container {
+        position: relative;
+    }
+    header nav .container .navigation.active {
+        right: 0;
+    }
+    .shop.active {
+        right: 0;
+    }
+    .search.active {
+        right: 0;
+    }
+    header nav .container .navigation {
+        width: 150px;
+        padding: 10px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(15px);
+        position: absolute;
+        top: 85px;
+        right: -1000px;
+        display: flex;
+        flex-direction: column;
+        transition: 0.5s;
+    }
+    header nav .container .navigation a {
+        margin: 10px 0;
+    }
+    header nav .container .navigation a::before {
+        left: 0;
+    }
+    .shop {
+        position: absolute;
+        top: 273.5px;
+        right: -1000px;
+        width: 150px;
+        margin: 0 !important;
+        padding: 10px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(15px);
+        transition: 0.6s !important;
+    }
+    .shop span {
+        top: 1px;
+        left: 75px;
+    }
+    .search {
+        position: absolute;
+        top: 314px;
+        right: -1000px;
+        width: 150px;
+        margin: 0 !important;
+        padding: 10px;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(15px);
+        transition: 0.7s !important;
+    }
+    .slide .image-div {
+        left: 100px;
+    }
+    #menu {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 610px) {
+    .container {
+        max-width: 500px;
+    }
+    .slide .text-div h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .buttons {
+        margin-top: 100px;
+    }
+    .slide .image-div {
+        left: 0px;
+        top: -10px;
+    }
+    .slide:nth-child(even) .image-div {
+        left: -55px;
+    }
+}
+
+@media (max-width: 510px) {
+    .container {
+        max-width: 400px;
+    }
+    .slide .text-div h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 410px) {
+    .container {
+        max-width: 300px;
+    }
+    .slide .text-div {
+        padding: 0 10px;
+    }
+}
