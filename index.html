@@ -11,6 +11,9 @@
     <!-- Font Awesome cdn link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
+    <!-- Logo -->
+    <link rel="icon" href="./img/logo-title.png">
+
 </head>
 
 <body>
@@ -24,7 +27,7 @@
 
                 <div class="navigation">
                     <a href="#" class="active">Home</a>
-                    <a href="#">Shop</a>
+                    <a href="#shop">Shop</a>
                     <a href="#">Blogs</a>
                     <a href="#">Contact</a>
                 </div>
@@ -105,7 +108,78 @@
     </header>
     <!-- Header end -->
 
+    <!-- Main start -->
+
+    <main>
+        <!-- Discs start -->
+        <section id="shop" class="discs  container">
+            <div class="categories">
+
+                <h3>Categories</h1>
+                    <div class="buttons">
+
+                        <button>
+                        <span>Pupular</span> <span>(67)</span>
+                    </button>
+                        <button>
+                        <span>Classic</span> <span>(33)</span>
+                    </button>
+                        <button>
+                        <span>Rock</span> <span>(42)</span>
+                    </button>
+                        <button>
+                            <span>Pop</span> <span>(54)</span>
+                    </button>
+                        <button>
+                        <span>Jazz</span> <span>(21)</span>
+                    </button>
+                        <button>
+                        <span>Blues</span> <span>(41)</span>
+                    </button>
+
+                        <button>
+                        <span>Hip Hop</span> <span>(23)</span>
+                    </button>
+
+                        <button>
+                        <span>Techno</span> <span>(21)</span>
+                    </button>
+                        <button>
+                        <span>Dance</span> <span>(43)</span>
+                    </button>
+                        <button>
+                        <span>Disco</span> <span>(34)</span>
+                    </button>
+                    </div>
+                    <div class="price-range">
+                        <h3>Price Range</h3>
+                        <input type="range">
+                        <p>Price : <span>$39-$1230</span></p>
+                        <button>Filter</button>
+                    </div>
+            </div>
+            <div class="discs-view">
+                <div class="sorts">
+                    <div class="types">
+                        <button class="active" id="all">All discs</button>
+                        <button id="new">New discs</button>
+                        <button id="sale">On sale</button>
+                    </div>
+                    <div class="sorting-types">
+                        <button>Sort by : <span> Defaul sorting </span> <i class="fa-solid fa-angle-down"></i></button>
+                    </div>
+                </div>
+                <div class="card-container"></div>
+
+            </div>
+        </section>
+        <!-- Discs end -->
+    </main>
+
+    <!-- Main end -->
+
     <!-- JS -->
+    <script src="./js/vinyl-discs.js"></script>
     <script src="./js/app.js"></script>
 </body>
 
