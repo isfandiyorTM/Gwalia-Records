@@ -1045,7 +1045,7 @@ footer .container div img {
         max-width: 992px;
     }
     header section .container {
-        margin: 110px auto;
+        margin: 0px auto;
     }
     .slide .text-div {
         width: 100%;
@@ -1100,6 +1100,9 @@ footer .container div img {
     }
     #blog .blogs-container .blog .text-div {
         width: 55%;
+    }
+    .discs .discs-view {
+        margin-left: 0;
     }
 }
 
