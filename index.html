@@ -26,10 +26,10 @@
                 </a>
 
                 <div class="navigation">
-                    <a href="#" class="active">Home</a>
+                    <a href="#home" class="active">Home</a>
                     <a href="#shop">Shop</a>
                     <a href="#blog">Blogs</a>
-                    <a href="#">Contact</a>
+                    <a href="#contact">Contact</a>
                 </div>
 
                 <div class="login-div">
@@ -49,7 +49,7 @@
             </div>
         </nav>
 
-        <section>
+        <section id="home">
             <div class="container">
                 <div class="sliders">
                     <div class="slide active slide-one">
@@ -111,6 +111,61 @@
     <!-- Main start -->
 
     <main>
+
+        <!-- Login / Register start -->
+        <section id="login-register">
+            <div class="background"></div>
+
+            <div class="login-container">
+                <button id="close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                <div class="buttons">
+                    <button id="login-btn">Login</button>
+                    <button id="register-btn">Register</button>
+                </div>
+
+                <p>Enter your username and password to login.</p>
+                <form action="#">
+                    <input type="email" placeholder="Email or phone number">
+                    <input type="password" placeholder="Password">
+                    <button class="forgot-password">Forgot password?</button>
+                    <button class="login-btn">Login</button>
+
+                    <p class="another-way">Or login with</p>
+
+                    <button class="google-btn"><img src="./img/google.png" alt="google icon"> Login with Google</button>
+                    <button class="facebook-btn"><i class="fa-brands fa-facebook-f"></i> Login with Facebook</button>
+                </form>
+            </div>
+
+            <div class="register-container">
+                <button id="close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                <div class="buttons">
+                    <button id="login-btn">Login</button>
+                    <button id="register-btn">Register</button>
+                </div>
+
+                <p>Enter your username and password to register.</p>
+                <form action="#">
+                    <!-- <input type="text" placeholder="Username"> -->
+                    <input type="email" placeholder="Email or phone number">
+                    <input type="password" placeholder="Password">
+                    <input type="password" placeholder="Confirm Password">
+
+                    <button class="login-btn">Register</button>
+
+                    <p class="another-way">Or register with</p>
+
+                    <button class="google-btn"><img src="./img/google.png" alt="google icon"> Continue with Google</button>
+                    <button class="facebook-btn"><i class="fa-brands fa-facebook-f"></i> Continue with Facebook</button>
+                </form>
+            </div>
+        </section>
+        <!-- Login / Register end -->
+
         <!-- Discs start -->
         <section id="shop" class="discs  container">
             <div class="categories">
@@ -204,16 +259,85 @@
         <!-- Blog end -->
 
         <!-- Contact start -->
-        <section id="contact" class="contact container">
-            <a href="#home" class="logo">
-                <img src="./img/logo-mid-term-site.png" alt="logo">
-            </a>
+        <section id="contact" class="contact">
+            <div class="container">
+                <a href="#home" class="logo">
+                    <img src="./img/logo-mid-term-site.png" alt="logo">
+                </a>
+
+                <a href="#">
+                    <i class="fa-solid fa-location-dot"></i> 70 West Buckingham Ave. Farmingdale, NY 11735
+                </a>
+                <a href="#">
+                    <i class="fa-regular fa-envelope"></i> contact@gwaliarecords.com
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-phone"></i> +998 911 71 90
+                </a>
+            </div>
         </section>
         <!-- Contact end -->
 
     </main>
 
     <!-- Main end -->
+
+
+    <!-- Footer start -->
+    <footer>
+        <div class="container">
+            <div>
+                <h3>My account</h3>
+                <a href="#">My account</a>
+                <a href="#">Our stores</a>
+                <a href="#">Contact us</a>
+                <a href="#">Career</a>
+                <a href="#">Specials</a>
+            </div>
+
+            <div>
+                <h3>Help & Guide</h3>
+                <a href="#">Help Center</a>
+                <a href="#">How to buy</a>
+                <a href="#">Shipping & Delivery</a>
+                <a href="#">Product Policy</a>
+                <a href="#">How to Return</a>
+            </div>
+
+            <div>
+                <h3>Categories</h3>
+                <a href="#">Popular</a>
+                <a href="#">Classic</a>
+                <a href="#">Rock</a>
+                <a href="#">Pop</a>
+                <a href="#">Hip Hop</a>
+            </div>
+
+            <div>
+                <h3>Social Media</h3>
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/isfandiyor__madaminov?igshid=OGQ5ZDc2ODk2ZA==" target="_blank">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://t.me/isfandiyor_madaminov" target="_blank">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="https://uz.linkedin.com/in/isfandiyor-madaminov-923a1a294" target="_blank">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.youtube.com/@isfandiyor_madaminov">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+                <h3>We accept</h3>
+                <img src="./img/payment-type.jpg" alt="payment-type">
+            </div>
+
+        </div>
+    </footer>
+    <!-- Footer end -->
 
     <!-- JS -->
     <script src="./js/vinyl-discs.js"></script>
