@@ -36,7 +36,7 @@ const discs_list = [{
     {
         img: "./img/neon-ink.png",
         name: "Neon Ink",
-        prise: "121.00",
+        prise: "$121.00",
         sale: false,
         sale_prise: false,
     },
