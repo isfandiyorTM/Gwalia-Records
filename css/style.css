@@ -786,6 +786,7 @@ header section .container .buttons button:hover {
 footer {
     width: 100%;
     background: var(--main-sections-bg);
+    padding: 50px 0 80px;
 }
 
 footer .container {
@@ -793,7 +794,6 @@ footer .container {
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
-    /* padding: 70px 0px; */
 }
 
 footer .container div h3 {
